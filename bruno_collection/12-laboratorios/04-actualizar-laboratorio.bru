@@ -1,0 +1,23 @@
+meta {
+  name: 4. Actualizar Laboratorio
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000laboratorios/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "nombre": "Laboratorio Clínico Central Actualizado",
+    "direccion": "Av. Principal #123-45, Torre B",
+    "telefono": "6012345678"
+  }
+}

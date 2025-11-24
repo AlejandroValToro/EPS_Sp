@@ -1,0 +1,22 @@
+meta {
+  name: 4. Actualizar Departamento
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/departamentos/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "nombre": "Recursos Humanos y Talento",
+    "descripcion": "Departamento encargado de la gestión del personal y desarrollo organizacional"
+  }
+}

@@ -1,0 +1,24 @@
+meta {
+  name: 2. Crear Horario
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/horarios
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_medico": 1,
+    "dia_semana": "Lunes",
+    "hora_inicio": "08:00:00",
+    "hora_fin": "12:00:00"
+  }
+}

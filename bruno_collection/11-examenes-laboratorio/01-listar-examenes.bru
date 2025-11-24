@@ -1,0 +1,14 @@
+meta {
+  name: 1. Listar todos los exámenes de laboratorio
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:5000/examenes-laboratorio
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

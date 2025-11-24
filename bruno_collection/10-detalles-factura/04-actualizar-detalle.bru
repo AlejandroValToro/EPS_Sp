@@ -1,0 +1,25 @@
+meta {
+  name: 4. Actualizar Detalle de Factura
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/detalles-factura/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_factura": 1,
+    "concepto": "Consulta médica especializada",
+    "cantidad": 1,
+    "precio_unitario": 120000.00,
+    "subtotal": 120000.00
+  }
+}

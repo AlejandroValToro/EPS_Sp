@@ -1,0 +1,24 @@
+meta {
+  name: 4. Actualizar Examen de Laboratorio
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/examenes-laboratorio/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_consulta": 1,
+    "id_laboratorio": 1,
+    "tipo_examen": "Hemograma completo con diferencial",
+    "resultado": "Leucocitos elevados, requiere seguimiento"
+  }
+}

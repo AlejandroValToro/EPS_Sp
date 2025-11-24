@@ -1,0 +1,14 @@
+meta {
+  name: 3. Buscar Cita por ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:5000/citas/1
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

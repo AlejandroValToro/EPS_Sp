@@ -1,0 +1,14 @@
+meta {
+  name: 5. Eliminar Consulta
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/consultas/1
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

@@ -1,0 +1,22 @@
+meta {
+  name: 2. Crear Historia Clínica
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/historias-clinicas
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_paciente": 1,
+    "antecedentes": "Antecedentes de hipertensión en la familia. No alergias conocidas. Cirugía de apéndice en 2015."
+  }
+}

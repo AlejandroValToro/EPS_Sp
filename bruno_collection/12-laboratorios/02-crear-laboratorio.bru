@@ -1,0 +1,23 @@
+meta {
+  name: 2. Crear Laboratorio
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/laboratorios
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "nombre": "Laboratorio Clínico Central",
+    "direccion": "Av. Principal #123-45",
+    "telefono": "6012345678"
+  }
+}

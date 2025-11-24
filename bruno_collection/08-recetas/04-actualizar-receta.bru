@@ -1,0 +1,25 @@
+meta {
+  name: 4. Actualizar Receta
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/recetas/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_consulta": 1,
+    "id_medicamento": 1,
+    "dosis": "500 mg",
+    "frecuencia": "Cada 6 horas",
+    "duracion": "7 días"
+  }
+}

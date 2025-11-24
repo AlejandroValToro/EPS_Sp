@@ -1,0 +1,25 @@
+meta {
+  name: 2. Crear Detalle de Factura
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/detalles-factura
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_factura": 1,
+    "concepto": "Consulta médica general",
+    "cantidad": 1,
+    "precio_unitario": 80000.00,
+    "subtotal": 80000.00
+  }
+}

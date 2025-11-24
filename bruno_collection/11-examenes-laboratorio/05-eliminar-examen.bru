@@ -1,0 +1,14 @@
+meta {
+  name: 5. Eliminar Examen de Laboratorio
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:5000/examenes-laboratorio/1
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

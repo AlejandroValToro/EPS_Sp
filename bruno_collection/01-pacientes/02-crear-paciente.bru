@@ -1,0 +1,29 @@
+meta {
+  name: 2. Crear Paciente
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/pacientes
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "documento": "1017154082",
+    "tipo_documento": "CC",
+    "nombres": "Jaime Alberto",
+    "apellidos": "Castaño Vallejo",
+    "fecha_nacimiento": "1987-03-11",
+    "genero": "M",
+    "direccion": "Cra 45 # 62-80",
+    "telefono": "3137799890",
+    "email": "jimmy1395@email.com"
+  }
+}

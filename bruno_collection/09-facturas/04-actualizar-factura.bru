@@ -1,0 +1,23 @@
+meta {
+  name: 4. Actualizar Factura
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/facturas/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_paciente": 1,
+    "monto_total": 180000.00,
+    "estado": "Pagada"
+  }
+}

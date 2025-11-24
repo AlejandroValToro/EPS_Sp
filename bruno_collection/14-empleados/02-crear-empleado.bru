@@ -1,0 +1,26 @@
+meta {
+  name: 2. Crear Empleado
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/empleados
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "documento": "1122334455",
+    "nombres": "Ana María",
+    "apellidos": "Rodríguez Silva",
+    "id_departamento": 1,
+    "cargo": "Analista de RH",
+    "fecha_contratacion": "2023-01-15"
+  }
+}

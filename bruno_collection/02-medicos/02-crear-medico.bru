@@ -1,0 +1,27 @@
+meta {
+  name: 2. Crear Médico
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/medicos
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "documento": "987654321",
+    "nombres": "María Elena",
+    "apellidos": "García López",
+    "id_especialidad": 1,
+    "telefono": "3109876543",
+    "email": "maria.garcia@clinica.com",
+    "tarjeta_profesional": "TP123456"
+  }
+}

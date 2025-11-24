@@ -1,0 +1,22 @@
+meta {
+  name: 4. Actualizar Especialidad
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/especialidades/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "nombre": "Cardiología Actualizada",
+    "descripcion": "Especialidad médica que se ocupa del corazón y el sistema circulatorio - ACTUALIZADA"
+  }
+}

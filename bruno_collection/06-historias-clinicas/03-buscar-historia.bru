@@ -1,0 +1,14 @@
+meta {
+  name: 3. Buscar Historia Clínica por ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/historias-clinicas/1
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

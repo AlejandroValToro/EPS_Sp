@@ -1,0 +1,24 @@
+meta {
+  name: 2. Crear Examen de Laboratorio
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/examenes-laboratorio
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_consulta": 1,
+    "id_laboratorio": 1,
+    "tipo_examen": "Hemograma completo",
+    "resultado": "Dentro de parámetros normales"
+  }
+}

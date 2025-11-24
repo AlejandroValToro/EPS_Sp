@@ -1,0 +1,25 @@
+meta {
+  name: 4. Actualizar Cita
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/citas/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_paciente": 1,
+    "id_medico": 1,
+    "fecha_hora": "2024-01-15 11:00:00",
+    "estado": "Completada",
+    "motivo": "Consulta general por dolor de cabeza - COMPLETADA"
+  }
+}

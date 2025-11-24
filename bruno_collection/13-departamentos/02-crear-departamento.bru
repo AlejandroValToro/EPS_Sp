@@ -1,0 +1,22 @@
+meta {
+  name: 2. Crear Departamento
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/departamentos
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "nombre": "Recursos Humanos",
+    "descripcion": "Departamento encargado de la gestión del personal"
+  }
+}

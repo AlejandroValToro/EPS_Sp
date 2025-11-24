@@ -1,0 +1,14 @@
+meta {
+  name: 5. Eliminar Laboratorio
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:5000/laboratorios/1
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

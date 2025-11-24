@@ -1,0 +1,26 @@
+meta {
+  name: 4. Actualizar Empleado
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/empleados/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "documento": "1122334455",
+    "nombres": "Ana María",
+    "apellidos": "Rodríguez Silva Actualizado",
+    "id_departamento": 1,
+    "cargo": "Coordinador de RH",
+    "fecha_contratacion": "2023-01-15"
+  }
+}

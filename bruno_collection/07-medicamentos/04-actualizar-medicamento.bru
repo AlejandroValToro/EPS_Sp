@@ -1,0 +1,24 @@
+meta {
+  name: 4. Actualizar Medicamento
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/medicamentos/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "nombre": "Acetaminofén Actualizado",
+    "descripcion": "Analgésico y antipirético para el alivio del dolor y la fiebre - ACTUALIZADO",
+    "fabricante": "Genfar",
+    "stock": 200
+  }
+}

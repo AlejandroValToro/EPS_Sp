@@ -1,0 +1,14 @@
+meta {
+  name: 5. Eliminar Empleado
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:5000/empleados/1
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

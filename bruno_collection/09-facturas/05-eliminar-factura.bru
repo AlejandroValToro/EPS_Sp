@@ -1,0 +1,14 @@
+meta {
+  name: 5. Eliminar Factura
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:5000/facturas/1
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

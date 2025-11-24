@@ -1,0 +1,23 @@
+meta {
+  name: 2. Crear Factura
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/facturas
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_paciente": 1,
+    "monto_total": 150000.00,
+    "estado": "Pendiente"
+  }
+}

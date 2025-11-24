@@ -1,0 +1,22 @@
+meta {
+  name: 4. Actualizar Historia Clínica
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/historias-clinicas/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_paciente": 1,
+    "antecedentes": "Antecedentes de hipertensión en la familia. No alergias conocidas. Cirugía de apéndice en 2015. Nueva información: Diabetes tipo 2 diagnosticada en 2023."
+  }
+}

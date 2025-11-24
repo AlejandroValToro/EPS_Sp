@@ -1,0 +1,14 @@
+meta {
+  name: 1. Listar todos los departamentos
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:5000/departamentos
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

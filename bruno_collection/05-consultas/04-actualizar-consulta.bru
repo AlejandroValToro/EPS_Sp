@@ -1,0 +1,25 @@
+meta {
+  name: 4. Actualizar Consulta
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/consultas/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+  {
+    "id_cita": 1,
+    "id_historia": 1,
+    "diagnostico": "Cefalea tensional - Actualizado",
+    "tratamiento": "Reposo, analgésicos y control del estrés",
+    "observaciones": "Paciente refiere mejoría completa"
+  }
+}
