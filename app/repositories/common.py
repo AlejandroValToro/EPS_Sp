@@ -50,9 +50,6 @@ class CitasRepositorio(RepositorioBase):
             self.session.rollback()
             return False
 
-# ... (Other repositories would follow similar pattern, omitted for brevity but should be implemented for full functionality)
-# Implementing a few more critical ones
-
 class HistoriasClinicasRepositorio(RepositorioBase):
     def __init__(self, session):
         super().__init__(session, HistoriasClinicas)
